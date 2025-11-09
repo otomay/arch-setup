@@ -20,5 +20,8 @@ done
 # ===
 
 mkdir -p pkglist
-pacman -Qqe > pkglist/pacman-packages.txt
 yay -Qqe > pkglist/yay-packages.txt
+
+git add .
+git commit -m "Backup automático $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nada para commitar"
+git push origin main || echo "Falha no push."
