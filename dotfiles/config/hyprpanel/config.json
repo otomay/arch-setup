@@ -410,10 +410,10 @@
   "theme.bar.buttons.modules.cpuTemp.text": "#fab387",
   "theme.bar.buttons.modules.cpuTemp.border": "#fab387",
   "theme.osd.border.color": "#8ff0a4",
-  "theme.matugen": false,
+  "theme.matugen": true,
   "theme.bar.transparent": true,
   "theme.bar.menus.monochrome": false,
-  "wallpaper.pywal": false,
+  "wallpaper.pywal": true,
   "theme.bar.enableShadow": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.network.showWifiInfo": true,
@@ -435,13 +435,13 @@
         "notifications"
       ],
       "middle": [
-        "media"
+        "media",
+        "systray"
       ],
       "right": [
         "hyprsunset",
         "volume",
         "custom/toggle-monitor",
-        "systray",
         "battery",
         "network",
         "bluetooth",
@@ -470,6 +470,9 @@
   "menus.dashboard.shortcuts.left.shortcut4.command": "",
   "menus.dashboard.shortcuts.left.shortcut4.icon": "",
   "bar.customModules.hyprsunset.temperature": "4000k",
-  "wallpaper.enable": false,
-  "wallpaper.image": ""
+  "wallpaper.enable": true,
+  "wallpaper.image": "/home/renan/walls/manga/a_black_and_white_image_of_a_man's_face.png",
+  "menus.dashboard.powermenu.avatar.image": "/home/renan/walls/manga/a_black_and_white_image_of_a_man's_face.png",
+  "theme.matugen_settings.scheme_type": "monochrome",
+  "theme.matugen_settings.variation": "standard_1"
 }

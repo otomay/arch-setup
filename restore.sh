@@ -87,6 +87,11 @@ if [[ -f "$BASE_DIR/dotfiles/zsh/.zshrc" ]]; then
     cp -f "$BASE_DIR/dotfiles/zsh/.zshrc" ~/.zshrc
 fi
 
+# Zsh
+if [[ -f "$BASE_DIR/dotfiles/zsh/.zprofile" ]]; then
+    cp -f "$BASE_DIR/dotfiles/zsh/.zprofile" ~/.zprofile
+fi
+
 # Tema do Oh My Zsh
 if [[ -d "$BASE_DIR/dotfiles/zsh/.oh-my-zsh/themes" ]]; then
     mkdir -p ~/.oh-my-zsh/themes
@@ -104,6 +109,23 @@ if [[ -d "$BASE_DIR/dotfiles/config" ]]; then
         cp -rf "$d" "$target"
     done
 fi
+
+# -------------------------------------------------------------
+# 6️⃣ Restaurar autologin no tty1
+# -------------------------------------------------------------
+if [[ -f "$BASE_DIR/dotfiles/systemd/getty@tty1.service.d/override.conf" ]]; then
+    echo "==> Restaurando autologin systemd (tty1)..."
+    sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+    sudo cp "$BASE_DIR/dotfiles/systemd/getty@tty1.service.d/override.conf" /etc/systemd/system/getty@tty1.service.d/
+    sudo systemctl daemon-reload
+    sudo systemctl restart getty@tty1.service
+else
+    echo "Aviso: override.conf não encontrado — pulando autologin."
+fi
+
+
+# TODO: Adicionar git clone dos wallpapers
+# TODO: Adicionar setup dos temas rofi
 
 # -------------------------------------------------------------
 # Finalização

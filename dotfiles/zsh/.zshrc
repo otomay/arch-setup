@@ -77,7 +77,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   fast-syntax-highlighting
-  zsh-autocomplete
+  #zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,3 +119,4 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
+export PATH=$HOME/.config/rofi/scripts:$PATH

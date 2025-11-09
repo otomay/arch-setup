@@ -54,6 +54,7 @@ libva-intel-driver
 linux
 linux-firmware
 linux-lts
+lvm2
 matugen-bin
 mpv
 nano
@@ -80,6 +81,7 @@ qview
 rofi
 rofi-bluetooth-git
 sof-firmware
+steam
 swww
 ttf-dejavu
 ttf-droid
