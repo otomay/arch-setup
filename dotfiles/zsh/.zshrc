@@ -120,3 +120,5 @@ zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 export PATH=$HOME/.config/rofi/scripts:$PATH
+
+export PATH=$PATH:/home/renan/.spicetify
