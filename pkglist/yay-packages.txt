@@ -16,6 +16,7 @@ breeze5
 brightnessctl
 btop
 clipse
+clonezilla
 cpio
 dart-sass
 dislocker
@@ -96,11 +97,13 @@ ttf-droid
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-roboto
+udiskie
 unzip
 visual-studio-code-bin
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
+wallust
 waybar
 waypaper
 wf-recorder-git

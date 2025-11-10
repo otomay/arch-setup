@@ -7,7 +7,7 @@ echo "============================"
 echo "🚀 Iniciando setup do Arch..."
 echo "============================"
 
-echo "renan ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/renan >/dev/null
+echo "renan ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/100_renan >/dev/null
 sudo chmod 440 /etc/sudoers.d/renan
 
 # -------------------------------------------------------------

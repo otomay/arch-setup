@@ -94,11 +94,11 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     6;
-    lines:                       3;
+    columns:                     4;
+    lines:                       2;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
@@ -144,11 +144,11 @@ element selected.normal {
     text-color:                  @foreground;
 }
 element-icon {
-    padding:                     30px;
-    border-radius:               20px;
+    padding:                     0px;
+    border-radius:               0px;
     background-color:            @background-alt;
     text-color:                  inherit;
-    size:                        64px;
+    size:                        160px;
     cursor:                      inherit;
 }
 element-text {
