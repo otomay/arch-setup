@@ -8,7 +8,7 @@ echo "🚀 Iniciando setup do Arch..."
 echo "============================"
 
 echo "renan ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/100_renan >/dev/null
-sudo chmod 440 /etc/sudoers.d/renan
+sudo chmod 440 /etc/sudoers.d/100_renan
 
 # -------------------------------------------------------------
 # 1️⃣ Atualizar sistema e instalar yay
