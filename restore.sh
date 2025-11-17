@@ -75,6 +75,13 @@ else
     echo "Aviso: yay não encontrado ou lista ausente. Pulando restauração do AUR."
 fi
 
+# cpu managment
+sudo auto-cpufreq --install
+sudo systemctl enable --now thermald
+
+# instalar dank shell
+curl -fsSL https://install.danklinux.com | sh
+
 # -------------------------------------------------------------
 # 5️⃣ Restaurar dotfiles
 # -------------------------------------------------------------
@@ -127,8 +134,7 @@ else
 fi
 
 
-# TODO: Adicionar git clone dos wallpapers
-# TODO: Adicionar setup dos temas rofi
+git clone https://github.com/dharmx/walls
 
 # -------------------------------------------------------------
 # Finalização

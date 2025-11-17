@@ -1,8 +1,0 @@
-[09:28:04 2025-11-10] FETCHING Version 2.42.0
-[09:28:04 2025-11-10] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.42.0/spicetify-2.42.0-linux-amd64.tar.gz
-[09:28:04 2025-11-10] EXTRACTING /home/renan/.spicetify/spicetify.tar.gz
-[09:28:05 2025-11-10] SETTING EXECUTABLE PERMISSIONS TO /home/renan/.spicetify/spicetify
-[09:28:05 2025-11-10] REMOVING /home/renan/.spicetify/spicetify.tar.gz
-[09:28:05 2025-11-10] spicetify path already set in /home/renan/.zshrc, continuing...
-[09:28:05 2025-11-10] spicetify v2.42.0 was installed successfully to /home/renan/.spicetify
-[09:28:05 2025-11-10] Run 'spicetify --help' to get started
