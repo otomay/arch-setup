@@ -1,0 +1,30 @@
+{
+  "hyprsunset-menu": {
+    "width": 250,
+    "content": [
+      {
+        "type": "label",
+        "text": "Hyprsunset Control",
+        "style": "title"
+      },
+      {
+        "type": "slider",
+        "label": "Gamma",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "value": "bash -c 'hyprctl hyprsunset | grep gamma | awk \"{print int($2*100)}\"'",
+        "onChange": "bash -c 'hyprctl hyprsunset gamma {value}'"
+      },
+      {
+        "type": "slider",
+        "label": "Temperature (K)",
+        "min": 1000,
+        "max": 25000,
+        "step": 500,
+        "value": "bash -c 'hyprctl hyprsunset | grep temperature | awk \"{print int($2)}\"'",
+        "onChange": "bash -c 'hyprctl hyprsunset temperature {value}'"
+      }
+    ]
+  }
+}

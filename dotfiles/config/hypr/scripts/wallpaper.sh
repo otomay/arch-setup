@@ -1,9 +1,6 @@
 #!/bin/bash
 
-dir="$HOME/.config/rofi/launchers/type-2"
-theme='style-8'
-
-# Diretórios com papéis de parede
+# Diretórios de origem
 DIRS=(
     "$HOME/walls/manga"
     "$HOME/walls/radium"
@@ -12,37 +9,57 @@ DIRS=(
     "$HOME/walls/anime"
     "$HOME/walls/fauna"
     "$HOME/walls/evangelion"
+    "$HOME/walls/aerial"
+    "$HOME/walls/apocalypse"
+    "$HOME/walls/centered"
+    "$HOME/walls/chillop"
+    "$HOME/walls/gruvbox"
+    "$HOME/walls/m-26.jp"
+    "$HOME/walls/nord"
+    "$HOME/walls/radium"
+    "$HOME/walls/stalenhag"
+
 )
 
-# Coleta todos os arquivos de imagem válidos
-mapfile -t WALLS < <(find "${DIRS[@]}" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \))
+# Diretório de destino para os symlinks
+TARGET_DIR="$HOME/wallpapers"
 
-# Gera uma lista apenas com os nomes dos arquivos
-mapfile -t NAMES < <(basename -a "${WALLS[@]}")
+echo "Gerando lista de imagens válidas..."
 
-# Monta a lista para o rofi, com suporte a ícones (thumbnails)
-ROFI_LIST=""
-for img in "${WALLS[@]}"; do
-    name=$(basename "$img")
-    # Cada linha contém o nome + o campo de ícone (thumbnail)
-    ROFI_LIST+="$name\0icon\x1f$img\n"
+# Coleta imagens válidas
+mapfile -t ALL_WALLS < <(find "${DIRS[@]}" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \))
+
+VALID_WALLS=()
+
+for img in "${ALL_WALLS[@]}"; do
+    info=$(file "$img")
+    if [[ $info =~ ([0-9]+)x([0-9]+) ]]; then
+        width=${BASH_REMATCH[1]}
+        height=${BASH_REMATCH[2]}
+        # Somente >=1920x1080 e formato paisagem
+        if (( width >= 1920 && height >= 1080 && width > height )); then
+            VALID_WALLS+=("$img")
+        fi
+    fi
 done
 
-# Mostra menu com nomes
-selected_name=$(echo -en "$ROFI_LIST" | rofi -dmenu -theme ${dir}/${theme}.rasi -p "Select Wallpaper:")
+echo "Foram encontradas ${#VALID_WALLS[@]} imagens válidas."
 
-# Se o usuário escolheu algo
-if [[ -n "$selected_name" ]]; then
-    # Encontra o caminho completo correspondente ao nome escolhido
-    for w in "${WALLS[@]}"; do
-        if [[ "$(basename "$w")" == "$selected_name" ]]; then
-            selected_wall="$w"
-            break
-        fi
-    done
+# Cria o diretório de destino se não existir
+mkdir -p "$TARGET_DIR"
 
-    awww img "$selected_wall" --transition-type fade --transition-fps 60 --transition-step 100
-    wallust run "$selected_wall" -b kmeans -p dark16
-    notify-send "Wallpaper changed" "$selected_name"
-    exit 0
-fi
+# Limpa symlinks antigos (somente links simbólicos)
+find "$TARGET_DIR" -maxdepth 1 -type l -exec rm -f {} \;
+
+# Cria novos symlinks
+for img in "${VALID_WALLS[@]}"; do
+    link_name="$TARGET_DIR/$(basename "$img")"
+    # Evita conflito de nomes
+    if [[ -e "$link_name" && ! -L "$link_name" ]]; then
+        echo "Aviso: arquivo existente não é link, pulando $link_name"
+        continue
+    fi
+    ln -sf "$img" "$link_name"
+done
+
+echo "Symlinks criados com sucesso em $TARGET_DIR"

@@ -1,17 +1,23 @@
 {
     "custom/toggle-monitor": {
         "icon": "🖥️",
-        "label": " {active}",
-        "tooltip": "Current active monitor: {active}",
+        "label": "",
+        "tooltip": "Change monitor",
         "truncationSize": -1,
-        "executeOnAction": "bash -c 'active=$(hyprctl monitors | awk \"/Monitor/ {monitor=\\$2} /focused: yes/ {print monitor}\"); echo \"{\\\"active\\\": \\\"$active\\\"}\"'",
         "hideOnEmpty": false,
         "actions": {
-            "onLeftClick": "~/.config/hypr/scripts/toggle-monitor.sh",
+            "onLeftClick": "kitty hyprmon",
             "onRightClick": "",
             "onMiddleClick": "",
             "onScrollUp": "",
             "onScrollDown": ""
         }
+    },
+    "custom/hyprsunset-control": {
+        "icon": "☀️",
+        "label": "",
+        "tooltip": "Ajuste de Gamma e Temperatura",
+        "onLeftClick": "toggleMenu hyprsunset-menu"
     }
+
 }

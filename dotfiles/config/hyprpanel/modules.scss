@@ -16,3 +16,10 @@
             'icon-size': 1em
         )
 );
+
+@include styleModule('cmodule-hyprsunset-control', (
+  'icon-color': #f7e58f,
+  'hover-background': #3a3a3a,
+  'active-background': #444,
+));
+

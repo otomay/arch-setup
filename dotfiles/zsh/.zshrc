@@ -122,3 +122,9 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
 export PATH=$PATH:/home/renan/.spicetify
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+/usr/local/bin/ffetch
