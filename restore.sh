@@ -133,9 +133,6 @@ else
     echo "Aviso: override.conf não encontrado — pulando autologin."
 fi
 
-
-git clone https://github.com/dharmx/walls
-
 # -------------------------------------------------------------
 # Finalização
 # -------------------------------------------------------------
