@@ -44,12 +44,14 @@ exec-once = kbuildsycoca6
 exec-once = udiskie
 exec-once = awww-daemon
 
-#exec-once = hyprsunset
-#exec-once = bash -c "wl-paste --watch cliphist store &"
-exec-once = hyprsession
+# ==================
+# STARTUP APPS
+# ==================
+
+exec-once = hyprsunset
+exec-once = bash -c "wl-paste --watch cliphist store &"
 exec-once = /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec-once = ~/.config/hypr/scripts/display-startup.sh
-exec-once = sunshine
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -493,5 +495,3 @@ windowrule = float on, match:class ^(zoom)$
 windowrule = opacity 0.9 0.9, match:float 0, match:focus 0
 
 layerrule = no_anim on, match:namespace ^(quickshell)$
-
-source = ./dms/outputs.conf
