@@ -58,6 +58,7 @@
   "controlCenterShowMicPercent": false,
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
+  "controlCenterShowScreenSharingIcon": true,
   "showPrivacyButton": true,
   "privacyShowMicIcon": false,
   "privacyShowCameraIcon": false,
@@ -171,8 +172,8 @@
   "niriOverviewOverlayEnabled": true,
   "useAutoLocation": true,
   "weatherEnabled": true,
-  "networkPreference": "auto",
-  "vpnLastConnected": "21dd4b01-db84-4d7c-965e-b15a1970ecc5",
+  "networkPreference": "wifi",
+  "vpnLastConnected": "a5729694-6d58-487e-88b4-5d94b28bee4b",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",

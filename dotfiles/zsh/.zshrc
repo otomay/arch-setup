@@ -128,3 +128,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 fastfetch
+export PATH="$HOME/.npm-global/bin:$PATH"

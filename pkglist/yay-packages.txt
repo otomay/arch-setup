@@ -1,6 +1,7 @@
 accountsservice
 adw-gtk-theme
 affine-bin
+android-sdk-platform-tools
 anydesk-bin
 archlinux-xdg-menu
 ark
@@ -8,6 +9,7 @@ auto-cpufreq
 awww-git
 base
 base-devel
+beekeeper-studio-bin
 better-control-git
 bluez
 bluez-hid2hci
@@ -21,6 +23,7 @@ bruno-bin
 btop
 calf
 cava
+chafa
 chaotic-keyring
 chaotic-mirrorlist
 chromium
@@ -38,6 +41,7 @@ docker-buildx
 docker-compose
 dolphin
 dolphin-plugins
+earlyoom
 easyeffects
 efibootmgr
 fastfetch
@@ -46,10 +50,14 @@ ffmpeg
 firefox
 fladder-bin
 flatpak
+freerdp
+fzf
 gbm
+gimp
 git
 github-cli
 gnome-keyring
+gnome-text-editor
 google-cloud-cli
 grimblast-git
 gst-libav
@@ -60,6 +68,7 @@ gst-plugins-good
 gst-plugins-ugly
 gtksourceview3
 gvfs
+heimdall
 hyprcursor
 hypridle
 hyprland
@@ -82,6 +91,7 @@ kio-admin
 kitty
 lazydocker
 lazygit
+lazyssh-bin
 libgtop
 libpulse
 libreoffice-still
@@ -110,6 +120,7 @@ noto-fonts-emoji
 npm
 nwg-bar
 nwg-look
+obsidian
 openresolv
 pacman-contrib
 papirus-icon-theme
@@ -128,7 +139,9 @@ qt5ct-kde
 qt6ct-kde
 quickshell
 qview
+remmina
 sbctl
+seahorse
 slack-desktop
 sof-firmware
 spicetify-themes-git
@@ -136,6 +149,8 @@ spotify
 steam
 sunshine-bin
 swww
+systemd-manager-tui
+tailscale
 thermald
 thunderbird
 ttf-dejavu
@@ -150,9 +165,11 @@ visual-studio-code-bin
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
+weathr-bin
 wget
 wireguard-tools
 wireplumber
+witr-bin
 wlogout
 woff2-font-awesome
 xdg-desktop-portal
@@ -166,6 +183,7 @@ xorg-server
 xorg-xinit
 yay
 yay-debug
+yt-dlp
 zip
 zram-generator
 zsh
