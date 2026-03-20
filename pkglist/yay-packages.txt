@@ -11,6 +11,7 @@ base
 base-devel
 beekeeper-studio-bin
 better-control-git
+betterbird-bin
 bluez
 bluez-hid2hci
 bluez-utils
@@ -42,7 +43,6 @@ docker-compose
 dolphin
 dolphin-plugins
 earlyoom
-easyeffects
 efibootmgr
 fastfetch
 ferdium
@@ -134,6 +134,7 @@ power-profiles-daemon
 preload
 pyenv
 python-gpustat
+qbittorrent
 qt5-wayland
 qt5ct-kde
 qt6ct-kde
@@ -143,9 +144,11 @@ remmina
 sbctl
 seahorse
 slack-desktop
+sniplias-bin
 sof-firmware
 spicetify-themes-git
 spotify
+spotify-player
 steam
 sunshine-bin
 swww
@@ -166,12 +169,14 @@ vulkan-intel
 vulkan-nouveau
 vulkan-radeon
 weathr-bin
+wf-recorder
 wget
 wireguard-tools
 wireplumber
 witr-bin
 wlogout
 woff2-font-awesome
+work-tuimer
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -183,6 +188,7 @@ xorg-server
 xorg-xinit
 yay
 yay-debug
+youtube-tui
 yt-dlp
 zip
 zram-generator

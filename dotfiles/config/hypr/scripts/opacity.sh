@@ -14,7 +14,7 @@ if [[ "$action" != "up" && "$action" != "down" ]]; then
 fi
 
 # tenta obter o valor atual; se vazio, assume 1.0
-raw=$(hyprctl getprop active alpha 2>/dev/null | awk '{print $NF}')
+raw=$(hyprctl getprop active opacity 2>/dev/null | awk '{print $NF}')
 cur=${raw:-1.0}
 
 # valida que cur é número; caso contrário assume 1.0
@@ -31,7 +31,7 @@ else
 fi
 
 # aplica o mesmo valor para alpha e alphainactive
-hyprctl setprop active alpha "$new"
-hyprctl setprop active alphainactive "$new"
+hyprctl dispatch setprop active opacity "$new" "$new"
+hyprctl dispatch setprop active opacity_inactive "$new" "$new"
 
 echo "$cur -> $new"

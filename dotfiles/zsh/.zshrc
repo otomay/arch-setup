@@ -129,3 +129,16 @@ eval "$(pyenv init -)"
 
 fastfetch
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+
+
+
+
+
+
+
+
+
+
+
+

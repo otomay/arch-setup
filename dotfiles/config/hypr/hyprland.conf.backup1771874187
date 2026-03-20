@@ -53,11 +53,10 @@ exec-once = sunshine
 
 ####
 
-exec-once = kitty
+exec-once = "[workspace special:magic]" kitty
 exec-once = obsidian
-exec-once = betterbird
+exec-once = thunderbird
 exec-once = brave
-exec-once = ferdium
 
 ####
 
@@ -508,7 +507,6 @@ windowrule = workspace 1, match:class ^(brave)$
 windowrule = workspace 2, match:class ^(ferdium)$
 windowrule = workspace 2, match:class ^(slack)$
 windowrule = workspace 3, match:class ^(thunderbird)$
-windowrule = workspace 3, match:class ^(betterbird)$
 
 windowrule = workspace special:llm, match:class ^(obsidian)$
 
@@ -517,5 +515,3 @@ windowrule = workspace special:llm, match:class ^(obsidian)$
 layerrule = no_anim on, match:namespace ^(quickshell)$
 
 source = ./dms/outputs.conf
-
-source = ./dms/cursor.conf
