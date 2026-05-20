@@ -6,7 +6,7 @@
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "popupTransparency": 0.5,
+  "popupTransparency": 0.85,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
@@ -187,6 +187,17 @@
   "centeringMode": "index",
   "clockDateFormat": "dd/MM/yyyy",
   "lockDateFormat": "dd/MM/yyyy",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
+  "greeterEnableFprint": false,
+  "greeterEnableU2f": false,
+  "greeterWallpaperPath": "",
+  "greeterUse24HourClock": true,
+  "greeterShowSeconds": false,
+  "greeterPadHours12Hour": false,
+  "greeterLockDateFormat": "",
+  "greeterFontFamily": "",
+  "greeterWallpaperFillMode": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -197,7 +208,9 @@
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
-  "spotlightSectionViewModes": {},
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  },
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
@@ -248,9 +261,9 @@
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 600,
+  "acMonitorTimeout": 0,
   "acLockTimeout": 0,
-  "acSuspendTimeout": 10800,
+  "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
   "acProfileName": "",
   "batteryMonitorTimeout": 0,
@@ -297,6 +310,7 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
+  "matugenTemplateZed": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
@@ -338,6 +352,8 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 3,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
@@ -444,6 +460,14 @@
         }
       ],
       "rightWidgets": [
+        {
+          "id": "privacyIndicator",
+          "enabled": true
+        },
+        {
+          "id": "capsLockIndicator",
+          "enabled": true
+        },
         {
           "id": "cpuUsage",
           "enabled": true
@@ -557,8 +581,203 @@
   ],
   "systemMonitorVariants": [],
   "desktopWidgetPositions": {},
-  "desktopWidgetGridSettings": {},
-  "desktopWidgetInstances": [],
+  "desktopWidgetGridSettings": {
+    "HDMI-A-1": {
+      "size": 40,
+      "enabled": true
+    }
+  },
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1778684554059_9kzycga83",
+      "widgetType": "systemMonitor",
+      "name": "System Monitor",
+      "enabled": false,
+      "config": {
+        "showHeader": true,
+        "transparency": 0.8,
+        "colorMode": "primary",
+        "customColor": "#ffffff",
+        "showCpu": true,
+        "showCpuGraph": true,
+        "showCpuTemp": true,
+        "showGpuTemp": false,
+        "gpuPciId": "",
+        "showMemory": true,
+        "showMemoryGraph": true,
+        "showNetwork": true,
+        "showNetworkGraph": true,
+        "showDisk": true,
+        "showTopProcesses": false,
+        "topProcessCount": 3,
+        "topProcessSortBy": "cpu",
+        "layoutMode": "auto",
+        "graphInterval": 60,
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 795.59375,
+          "height": 500.1171875,
+          "x": 40,
+          "y": 80
+        }
+      }
+    },
+    {
+      "id": "dw_1778684574973_521aaa6zv",
+      "widgetType": "desktopClock",
+      "name": "Desktop Clock",
+      "enabled": false,
+      "config": {
+        "style": "analog",
+        "transparency": 0.8,
+        "colorMode": "primary",
+        "customColor": "#ffffff",
+        "showDate": true,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 200,
+          "height": 200,
+          "x": 920,
+          "y": 80
+        }
+      }
+    },
+    {
+      "id": "dw_1778684651461_gvrav5znk",
+      "widgetType": "dankDesktopWeather",
+      "name": "Dank Desktop Weather",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 687.13671875,
+          "height": 223.37109375,
+          "x": 1200,
+          "y": 80
+        },
+        "eDP-1": {
+          "width": 200,
+          "height": 200,
+          "x": 540,
+          "y": 260
+        }
+      }
+    },
+    {
+      "id": "dw_1778684761089_bg5h9672v",
+      "widgetType": "mediaPlayer",
+      "name": "Media Player",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 800,
+          "height": 280,
+          "x": 40,
+          "y": 600
+        },
+        "eDP-1": {
+          "width": 320,
+          "height": 200,
+          "x": 480,
+          "y": 260
+        }
+      }
+    },
+    {
+      "id": "dw_1778684766049_p1hn8qho9",
+      "widgetType": "dankAudioVisualizer",
+      "name": "Dank Audio Visualizer",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 800,
+          "height": 200,
+          "x": 40,
+          "y": 880
+        },
+        "eDP-1": {
+          "width": 200,
+          "height": 200,
+          "x": 540,
+          "y": 260
+        }
+      }
+    },
+    {
+      "id": "dw_1778684859576_oqvjofs2j",
+      "widgetType": "weatherArt",
+      "name": "Weather Art",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 1840,
+          "height": 240,
+          "x": 40,
+          "y": 800
+        },
+        "eDP-1": {
+          "width": 300,
+          "height": 240,
+          "x": 490,
+          "y": 240
+        }
+      }
+    },
+    {
+      "id": "dw_1778684934040_io2o5omm9",
+      "widgetType": "cavaVisualizer",
+      "name": "Cava Visualizer",
+      "enabled": false,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "HDMI-A-1": {
+          "width": 680,
+          "height": 160,
+          "x": 1200,
+          "y": 920
+        },
+        "eDP-1": {
+          "width": 200,
+          "height": 200,
+          "x": 540,
+          "y": 260
+        }
+      }
+    }
+  ],
   "desktopWidgetGroups": [],
   "builtInPluginSettings": {
     "dms_settings_search": {

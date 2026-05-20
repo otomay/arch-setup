@@ -35,6 +35,7 @@ cpupower
 cronie
 dart-sass
 dgop
+discord
 dislocker
 dms-shell-bin
 docker
@@ -45,7 +46,7 @@ dolphin-plugins
 earlyoom
 efibootmgr
 fastfetch
-ferdium
+ferdium-bin
 ffmpeg
 firefox
 fladder-bin
@@ -69,6 +70,8 @@ gst-plugins-ugly
 gtksourceview3
 gvfs
 heimdall
+httptoolkit-bin
+hydra-launcher-bin
 hyprcursor
 hypridle
 hyprland
@@ -85,6 +88,7 @@ icu76
 intel-media-driver
 intel-ucode
 intel-undervolt
+jadx
 jdk-openjdk
 kde-cli-tools
 kio-admin
@@ -105,6 +109,7 @@ lvm2
 mariadb
 mate-polkit
 matugen
+mdbtools
 mission-center
 mokutil
 moonlight-qt-bin
@@ -115,6 +120,7 @@ ncdu
 neovim
 networkmanager
 nodejs-lts-krypton
+notion-app-electron
 noto-fonts
 noto-fonts-emoji
 npm
@@ -129,6 +135,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+plezy-bin
 polkit-kde-agent
 power-profiles-daemon
 preload
@@ -154,6 +161,8 @@ sunshine-bin
 swww
 systemd-manager-tui
 tailscale
+tesseract
+tesseract-data-por
 thermald
 thunderbird
 ttf-dejavu
@@ -168,6 +177,7 @@ visual-studio-code-bin
 vulkan-intel
 vulkan-nouveau
 vulkan-radeon
+warsaw-bin
 weathr-bin
 wf-recorder
 wget
@@ -177,6 +187,7 @@ witr-bin
 wlogout
 woff2-font-awesome
 work-tuimer
+wtype
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -188,6 +199,7 @@ xorg-server
 xorg-xinit
 yay
 yay-debug
+ydotool
 youtube-tui
 yt-dlp
 zip

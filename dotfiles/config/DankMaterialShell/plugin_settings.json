@@ -9,7 +9,8 @@
     "enabled": true
   },
   "emojiLauncher": {
-    "enabled": true
+    "enabled": true,
+    "recentEmojis": "😂,🥵,🔴,⚠️,✅,🐋,⏰"
   },
   "linuxWallpaperEngine": {
     "enabled": false
@@ -22,11 +23,17 @@
     "enabled": false
   },
   "displayManager": {
-    "enabled": false
+    "enabled": true
   },
   "easyEffects": {
     "enabled": false,
     "currentOutputIndex": 0,
     "currentInputIndex": -1
+  },
+  "dankHyprlandWindows": {
+    "enabled": true
+  },
+  "alarmClock": {
+    "enabled": true
   }
 }

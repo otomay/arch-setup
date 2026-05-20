@@ -142,3 +142,22 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 
 
+
+# opencode
+export PATH=/home/renan/.opencode/bin:$PATH
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
+# bun completions
+[ -s "/home/renan/.bun/_bun" ] && source "/home/renan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/renan/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
