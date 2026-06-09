@@ -50,6 +50,7 @@ ferdium-bin
 ffmpeg
 firefox
 fladder-bin
+flameshot
 flatpak
 freerdp
 fzf
@@ -59,6 +60,7 @@ git
 github-cli
 gnome-keyring
 gnome-text-editor
+google-chrome
 google-cloud-cli
 grimblast-git
 gst-libav
@@ -119,6 +121,7 @@ nano
 ncdu
 neovim
 networkmanager
+nmap
 nodejs-lts-krypton
 notion-app-electron
 noto-fonts

@@ -4,12 +4,12 @@ hl.config({
         gaps_out = 8,
         border_size = 1,
         col = {
-            active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            active_border   = "rgba(595959aa)",
             inactive_border = "rgba(595959aa)",
         },
         resize_on_border = false,
         allow_tearing    = false,
-        layout = "dwindle",
+        layout = "scrolling",
     },
     decoration = {
         rounding       = 8,
@@ -84,9 +84,12 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = false,
-        focus_fit_method         = 0,
+        column_width             = 1,
+        focus_fit_method         = 1,
         follow_focus             = true,
-        column_width             = 0.8,
+        explicit_column_widths   = "0.6, 1.0",
+        follow_min_visible       = 0.6,
+        direction                = "right",
     },
 })
 

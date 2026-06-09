@@ -162,3 +162,8 @@ hl.layer_rule({
     match = { namespace = "^(quickshell)$" },
     no_anim = true,
 })
+
+hl.workspace_rule({ workspace = "6", monitor = "eDP-1", default = true })
+hl.workspace_rule({ workspace = "7", monitor = "eDP-1", default = true })
+hl.workspace_rule({ workspace = "8", monitor = "eDP-1", default = true })
+hl.workspace_rule({ workspace = "9", monitor = "eDP-1", default = true })

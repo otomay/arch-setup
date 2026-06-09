@@ -5,6 +5,8 @@ log() {
     echo "[hypr-toggle] $1"
 }
 
+sleep 10
+
 # Verifica estado da tampa
 lid_state_file=$(find /proc/acpi/button/lid/ -name state | head -n1)
 lid_closed=false
@@ -32,11 +34,11 @@ fi
 # Aplica lógica
 if [[ "$lid_closed" == true ]]; then
     log "Desligando eDP-1 por causa da tampa fechada."
-    hyprctl keyword monitor "eDP-1,disable"
+    hyprctl eval 'hl.monitor({ output = "eDP-1", disabled = true })'
 
     if [[ "$hdmi_connected" == true ]]; then
         log "Ativando HDMI-A-1."
-        hyprctl keyword monitor "HDMI-A-1,1920x1080@240,0x0,1"
+        hyprctl eval 'hl.monitor({ output = "HDMI-A-1", disabled = false })'
     else
         log "HDMI-A-1 não conectado. Nenhum monitor ativo!"
     fi

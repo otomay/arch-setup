@@ -35,9 +35,9 @@ if [[ "$lid_closed" == true ]]; then
 
     if [[ "$hdmi_connected" == true ]]; then
         log "Ativando HDMI-A-1."
-        hyprctl keyword monitor "eDP-1,disable"
+        hyprctl eval 'hl.monitor({ output = "eDP-1", disabled = true })'
         sleep 1
-        hyprctl keyword monitor "HDMI-A-1,1920x1080@240,0x0,1"
+        hyprctl eval 'hl.monitor({ output = "HDMI-A-1", disabled = false })'
     else
         log "HDMI-A-1 não conectado. Nenhum monitor ativo!"
     fi
@@ -48,11 +48,14 @@ fi
 if [[ "$hdmi_connected" == true ]]; then
     if hyprctl monitors | grep -q "eDP-1 (ID"; then
         log "Desativando eDP-1 e ativando HDMI-A-1."
-        hyprctl keyword monitor "eDP-1,disable"
-        hyprctl keyword monitor "HDMI-A-1,1920x1080@240,0x0,1"
+        hyprctl eval 'hl.monitor({ output = "eDP-1", disabled = true })'
+        hyprctl eval 'hl.monitor({ output = "HDMI-A-1", disabled = false })'
     else
         log "Ativando eDP-1 e desativando HDMI-A-1."
-        hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1.25"
-        hyprctl keyword monitor "HDMI-A-1,disable"
+        hyprctl eval 'hl.monitor({ output = "eDP-1", disabled = false })'
+        hyprctl eval 'hl.monitor({ output = "HDMI-A-1", disabled = true })'
     fi
+else
+    log "Nada a fazer, tentando ativar HDMI-A-1."
+    hyprctl eval 'hl.monitor({ output = "HDMI-A-1", disabled = false })'
 fi
